@@ -14,7 +14,7 @@ def test_tma():
         Girl("Margot", 2, [0, 1, 2])
     ]
 
-    matching = TMA(optimal_side=side_b, wrost_side=side_a, amount_to_choose=1).run()
+    matching = TMA(optimal_side=side_b, wrost_side=side_a, amount_to_choose=1).get_stable_matching()
 
     print("Final Matching!")
     for boy, girl in matching:

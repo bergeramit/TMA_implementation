@@ -66,7 +66,7 @@ class TMA:
         boys_on_balcony = ", ".join([boy.name for boy in candidates])
         print("{}'s Balcony: {}".format(girl.name, boys_on_balcony))
 
-    def run(self):
+    def _run(self):
         print("Begin TMA...")
         iteration = 0
         while self._changes_occurred:
@@ -84,4 +84,7 @@ class TMA:
             print()
 
         print("Finished")
+
+    def get_stable_matching(self):
+        self._run()
         return self._build_final_match()
